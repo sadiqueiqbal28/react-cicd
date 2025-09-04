@@ -16,3 +16,15 @@ jobs:
 
           - name: "check node version"
             run: node --version
+
+          - name: "clone the repository"
+            uses: actions/checkout@v4
+        
+          - name: "list dir"
+            run: ls -l
+
+          - name: "install dependencies"
+            run: npm install
+
+          - name: "list dir again"
+            run: ls
