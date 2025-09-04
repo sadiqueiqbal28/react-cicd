@@ -1,0 +1,15 @@
+name: "sample react pipeline/workflows"
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    setup-node-and-test:
+        runs-on: ubuntu-latest
+    
+        steps:
+          - name: "Setup nodeJS"
+            uses: actions/setup-node@v5
+            with:
+                node-version: '22'
